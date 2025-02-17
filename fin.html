@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sini-Maaria Herrala - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="#home" class="nav-item">Etusivu</a>
+      <a href="#portfolio" class="nav-item">Portfolio</a>
+      <a href="#contact" class="nav-item">Ota yhteyttä</a>
+    </nav>
+    <div class="lang-button" onclick="window.location.href='index.html'">
+      <img src="icons/globe.png" alt="Kielenvaihto">
+      <span>ENG</span>
+    </div>
+  </header>  
+
+  <section id="home">
+    <div class="home-section">
+      <div class="profile-container">
+        <img src="testi.png" alt="Profiilikuva">
+        <h2>Sini-Maaria Herrala</h2>
+        <p>Opiskelija, OSAO</p>
+        <p>2023 - </p>
+        <br>
+        <p>18/08/2006</p>
+        <p>Oulu, Suomi</p>
+        <br>
+        <p>sini.maaria.herrala@gmail.com</p>
+        <p>+358 040 1644930</p>
+      </div>
+      <div class="right-content">
+        <h1>Hei! Olen Sini-Maaria</h1>
+        <p>ja opiskelen toista vuotta ohjelmistokehittäjäksi. Olen erityisesti kiinnostunut UI/UX-suunnittelusta sekä ohjelmoinnin yhdistämisestä taiteelliseen ilmaisuun. Haluan luoda digitaalisia ratkaisuja, jotka yhdistävät ihmisiä ja syventävät yhteyttämme ympäröivään maailmaan.</p>
+        <div class="button-container">
+          <button>
+            CV
+          </button>
+          <button onclick="window.location.href='#contact'">Ota yhteyttä</button>
+          <button onclick="window.location.href='https://github.com/s3hesi00'">GitHub</button>
+        </div>
+        <h2>Taidot</h2>
+        <div class="skills-container">
+          <div>HTML</div>
+          <div>CSS</div>
+          <div>JS</div>
+        </div>
+        <h2>Työkalut</h2>
+        <div class="tools-container">
+          <div>Xd</div>
+          <div>Ps</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <h2>Projektejani</h2>
+    <div class="projects-container">
+      <div class="projects">
+        <div class="project">
+          <div class="project-content">
+            <img src="background.jpg" alt="Projekti 1">
+            <p>Projekti 1</p>
+          </div>
+          <a href="#" class="go-to-project">Siirry projektiin <img src="icons/arrow.png" alt="Nuoli"></a>
+        </div>
+        <div class="project">
+          <div class="project-content">
+            <img src="background.jpg" alt="Projekti 2">
+            <p>Projekti 2</p>
+          </div>
+          <a href="#" class="go-to-project">Siirry projektiin <img src="icons/arrow.png" alt="Nuoli"></a>
+        </div>
+        <div class="project">
+          <div class="project-content">
+            <img src="background.jpg" alt="Projekti 3">
+            <p>Projekti 3</p>
+          </div>
+          <a href="#" class="go-to-project">Siirry projektiin <img src="icons/arrow.png" alt="Nuoli"></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="contact">
+    <h2>Ota yhteyttä</h2>
+    <form>
+      <div class="input-row">
+        <input type="text" placeholder="* Nimi" class="underline-input" required>
+        <input type="text" placeholder="Yritys" class="underline-input">
+      </div>
+      <div class="input-row">
+        <input type="email" placeholder="* Sähköposti" class="underline-input" required>
+        <input type="tel" placeholder="* Puhelin" class="underline-input" required>
+      </div>
+      <textarea placeholder="Muutama sana..." class="text-box"></textarea>
+      <button type="submit" class="send-message">Lähetä viesti</button>
+    </form>
+  </section>
+  
+  <footer id="footer">
+    <div class="footer-contact">
+      <p>Sähköposti: <a href="mailto:sini.maaria.herrala@gmail.com">sini.maaria.herrala@gmail.com</a></p>
+      <p>Puhelin: +358 040 1644930</p>
+    </div>
+    <p>© 2025 Sini-Maaria Herrala | Kaikki oikeudet pidätetään.</p>
+  </footer>
+  
+
+  <script>
+    // Navigaation vieritystoiminto ja korostus
+    const navItems = document.querySelectorAll('.nav-item');
+
+    window.addEventListener('scroll', () => {
+      let currentSection = '';
+      document.querySelectorAll('section').forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (pageYOffset >= sectionTop - 100) {
+          currentSection = section.getAttribute('id');
+        }
+      });
+
+      navItems.forEach(item => {
+        item.classList.remove('active');
+        if (item.getAttribute('href') === `#${currentSection}`) {
+          item.classList.add('active');
+        }
+      });
+    });
+
+  </script>
+</body>
+</html>

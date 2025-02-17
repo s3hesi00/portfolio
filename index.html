@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sini-Maaria Herrala - Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="#home" class="nav-item">Home</a>
+      <a href="#portfolio" class="nav-item">Portfolio</a>
+      <a href="#contact" class="nav-item">Contact</a>
+    </nav>
+    <!-- Language Button -->
+    <div class="lang-button" onclick="window.location.href='fin.html'">
+      <img src="icons/globe.png" alt="Language Icon">
+      <span>FIN</span>
+    </div>
+  </header>  
+
+  <section id="home">
+    <div class="home-section">
+      <div class="profile-container">
+        <img src="testi.png" alt="Profile Picture">
+        <h2>Sini-Maaria Herrala</h2>
+        <p>Student at OSAO</p>
+        <p>2023 - ongoing</p>
+        <br>
+        <p>18/08/2006</p>
+        <p>Oulu, Finland</p>
+        <br>
+        <p>sini.maaria.herrala@gmail.com</p>
+        <p>+358 040 1644930</p>
+      </div>
+      <div class="right-content">
+        <h1>Hello! I'm Sini-Maaria,</h1>
+        <p>A second-year software development student. My interests lie at the intersection of creativity and technology. I’m especially drawn to UI/UX design and combining programming with artistic expression to craft digital solutions that connect people and inspire deeper connections to the world around us.</p>
+        <div class="button-container">
+          <button>
+            CV
+          </button>
+          <button onclick="window.location.href='#contact'">Contact</button>
+          <button onclick="window.location.href='https://github.com/s3hesi00'">GitHub</button>
+        </div>
+        <h2>Skills</h2>
+        <div class="skills-container">
+          <div>HTML</div>
+          <div>CSS</div>
+          <div>JS</div>
+        </div>
+        <h2>Tools</h2>
+        <div class="tools-container">
+          <div>Xd</div>
+          <div>Ps</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <h2>My Projects</h2>
+    <div class="projects-container">
+      <div class="projects">
+        <div class="project">
+          <div class="project-content">
+            <img src="background.jpg" alt="Project 1">
+            <p>Project 1</p>
+          </div>
+          <a href="#" class="go-to-project">Go to project <img src="icons/arrow.png" alt="Arrow"></a>
+        </div>
+        <div class="project">
+          <div class="project-content">
+            <img src="background.jpg" alt="Project 2">
+            <p>Project 2</p>
+          </div>
+          <a href="#" class="go-to-project">Go to project <img src="icons/arrow.png" alt="Arrow"></a>
+        </div>
+        <div class="project">
+          <div class="project-content">
+            <img src="background.jpg" alt="Project 3">
+            <p>Project 3</p>
+          </div>
+          <a href="#" class="go-to-project">Go to project <img src="icons/arrow.png" alt="Arrow"></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="contact">
+    <h2>Contact</h2>
+    <form>
+      <div class="input-row">
+        <input type="text" placeholder="* Name" class="underline-input" required>
+        <input type="text" placeholder="Company" class="underline-input">
+      </div>
+      <div class="input-row">
+        <input type="email" placeholder="* E-mail" class="underline-input" required>
+        <input type="tel" placeholder="* Phone" class="underline-input" required>
+      </div>
+      <textarea placeholder="A few words..." class="text-box"></textarea>
+      <button type="submit" class="send-message">Send message</button>
+    </form>
+  </section>
+  
+  <footer id="footer">
+    <div class="footer-contact">
+      <p>Email: <a href="mailto:sini.maaria.herrala@gmail.com">sini.maaria.herrala@gmail.com</a></p>
+      <p>Phone: +358 040 1644930</p>
+    </div>
+    <p>© 2025 Sini-Maaria Herrala | All rights reserved.</p>
+  </footer>
+  
+
+  <script>
+    // Navigation Scroll and Highlight
+    const navItems = document.querySelectorAll('.nav-item');
+
+    window.addEventListener('scroll', () => {
+      let currentSection = '';
+      document.querySelectorAll('section').forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (pageYOffset >= sectionTop - 100) {
+          currentSection = section.getAttribute('id');
+        }
+      });
+
+      navItems.forEach(item => {
+        item.classList.remove('active');
+        if (item.getAttribute('href') === `#${currentSection}`) {
+          item.classList.add('active');
+        }
+      });
+    });
+
+  </script>
+</body>
+</html>
