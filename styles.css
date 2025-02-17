@@ -53,7 +53,7 @@ html, body {
     padding: 10px 20px;
     cursor: pointer;
     font-size: 1.1em;
-    font-weight: bold;  /* Make font bold */
+    font-weight: bold;  
     z-index: 200;
   }
   
@@ -68,7 +68,7 @@ html, body {
   }
   
   .lang-button:hover img {
-    content: url('icons/globepink.png'); /* Change icon to globepink.png */
+    content: url('globepink.png'); 
   }
   
   section {
@@ -93,8 +93,8 @@ html, body {
   }
   
   .profile-container img {
-    width: 150px; /* Make the profile image smaller */
-    height: 150px; /* Maintain the aspect ratio */
+    width: 150px; 
+    height: 150px; 
     border-radius: 50%;
   }
   
@@ -184,13 +184,13 @@ html, body {
   
   .projects {
     display: flex;
-    gap: 30px;  /* Space between the projects */
-    justify-content: center;  /* Center the projects horizontally */
+    gap: 30px;  
+    justify-content: center; 
   }
   
   .project {
     background-color: #1d1d1d;
-    width: 250px;  /* Width of each project */
+    width: 250px; 
     padding: 20px;
     border-radius: 15px;
     text-align: center;
@@ -222,7 +222,7 @@ html, body {
   }
 
   .go-to-project:hover img {
-    content: url('icons/arrowpink.png'); /* Change icon to arrowpink.png */
+    content: url('arrowpink.png');
     transition: 0.1s;
   }
   
@@ -252,9 +252,9 @@ html, body {
   form {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;  /* Align form elements to the left */
-    width: 60%;  /* Set the form width to make it narrower */
-    margin: 0 auto;  /* Center the form horizontally */
+    align-items: flex-start;  
+    width: 60%;  
+    margin: 0 auto;  
   }
   
   .input-row {
@@ -271,7 +271,7 @@ html, body {
     border-bottom: 2px solid #C65374;
     color: #fff;
     padding: 10px;
-    width: 50%;  /* Adjust the width to make inputs narrower */
+    width: 50%; 
     font-size: 1.1em;
   }
   
